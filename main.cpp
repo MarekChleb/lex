@@ -19,7 +19,7 @@ void read_input() {
     scanf("%d%d", &N, &M);
     cin >> word;
     for (int i = 1; i <= N; i++) {
-        sufixes.insert(word.substr(N - 1, i));
+        sufixes.insert(make_pair(word.substr(N - i, i), N - i));
     }
 }
 
