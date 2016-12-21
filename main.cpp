@@ -1,6 +1,11 @@
 #include <iostream>
+#include <vector>
+
+#define MAX_NM 300006
+
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
     return 0;
 }
