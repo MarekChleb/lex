@@ -12,6 +12,7 @@ bool DEBUG = true;
 int N, M;
 string word;
 map<string> sufixes;
+int indexes[MAX_NM];
 
 using namespace std;
 
@@ -20,6 +21,11 @@ void read_input() {
     cin >> word;
     for (int i = 1; i <= N; i++) {
         sufixes.insert(make_pair(word.substr(N - i, i), N - i));
+    }
+
+    int i = 1;
+    for (auto sufix: sufixes) {
+        indexes[sufix.second] = i++;
     }
 }
 
